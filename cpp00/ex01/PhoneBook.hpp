@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:19 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/05 03:38:17 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/05 06:49:14 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,19 @@ class PhoneBook
 	};
 
 	private:
+		int _index;
 		Contact contact[BOOK_LEN];
 	public:
+		PhoneBook() : _index(0) {}
 		void PhonebookHeader() const;
 		void Add();
 		void SearchHeader() const;
 		void Search();
 		std::string GetBlock(std::string str);
+		~PhoneBook()
+		{
+			std::cout << COLOR_Y << "Goodbye!" << COLOR_END << std::endl;
+		}
 };
 
 #endif

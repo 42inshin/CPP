@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/05 03:38:22 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/05 06:48:57 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,11 @@ void PhoneBook::PhonebookHeader() const
 
 void PhoneBook::Add()
 {
-	static int s_index = 0;
-
-	if (s_index % BOOK_LEN == 0) {
-		s_index = 0;
+	if (_index % BOOK_LEN == 0) {
+		_index = 0;
 	}
-	contact[s_index].SetContact();
-	s_index++;
+	contact[_index].SetContact();
+	_index++;
 }
 
 std::string PhoneBook::GetBlock(std::string str)
