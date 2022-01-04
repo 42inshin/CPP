@@ -6,38 +6,38 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/04 12:11:44 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/05 03:38:22 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-std::string Contact::GetFirstName()
+std::string Contact::GetFirstName() const
 {
 	return firstName;
 }
 
-std::string Contact::GetLastName()
+std::string Contact::GetLastName() const
 {
 	return lastName;
 }
 
-std::string Contact::GetNickname()
+std::string Contact::GetNickname() const
 {
 	return nickname;
 }
 
-std::string Contact::GetPhoneNumber()
+std::string Contact::GetPhoneNumber() const
 {
 	return phoneNumber;
 }
 
-std::string Contact::GetSecret()
+std::string Contact::GetSecret() const
 {
 	return darkestSecret;
 }
 
-void	Contact::Account()
+void	Contact::SetContact()
 {
 	std::cout << "First Name: ";
 	std::cin >> firstName;
@@ -52,7 +52,7 @@ void	Contact::Account()
 	std::cout << "Saved" << std::endl;
 }
 
-void	Contact::Find()
+void	Contact::ShowContact() const
 {
 	std::cout << std::setw(17) << "First Name | " << firstName << std::endl;
 	std::cout << std::setw(17) << "Last Name | " << lastName << std::endl;
@@ -61,7 +61,7 @@ void	Contact::Find()
 	std::cout << std::setw(17) << "Darkest Secret | " << darkestSecret << std::endl;
 }
 
-void PhoneBook::PhonebookHeader()
+void PhoneBook::PhonebookHeader() const
 {
 	std::cout << COLOR_Y <<  std::setfill ('*') << std::setw (34) << COLOR_END << std::endl;
 	std::cout << COLOR_Y << "[CMD TYPE] ADD, SEARCH, EXIT" << COLOR_END << std::endl;
@@ -77,21 +77,21 @@ void PhoneBook::Add()
 	if (s_index % BOOK_LEN == 0) {
 		s_index = 0;
 	}
-	contact[s_index].Account();
+	contact[s_index].SetContact();
 	s_index++;
 }
 
-std::string PhoneBook::GetBlock(std::string word)
+std::string PhoneBook::GetBlock(std::string str)
 {
-	if (word.size() > WORD_WIDTH)
+	if (str.size() > WORD_WIDTH)
 	{
-		word[WORD_WIDTH - 1] = '.';
-		word.erase(WORD_WIDTH);
+		str[WORD_WIDTH - 1] = '.';
+		str.erase(WORD_WIDTH);
 	}
-	return word;
+	return str;
 }
 
-void PhoneBook::SearchHeader()
+void PhoneBook::SearchHeader() const
 {
 	std::cout << std::setw(10) << "Index" << "|";
 	std::cout << std::setw(10) << "First Name" << "|";
@@ -121,7 +121,7 @@ void PhoneBook::Search()
 		std::cin.ignore(2, '\n');
 	}
 	else
-		contact[index].Find();
+		contact[index].ShowContact();
 }
 
 
