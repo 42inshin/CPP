@@ -2,7 +2,7 @@ NAME	=	PhoneBook
 
 CC		=	clang++
 CFLAG	=	-Wall -Wextra -Werror
-SRC		=	PhoneBook.cpp
+SRC		=	PhoneBook.cpp main.cpp
 
 $(NAME):
 	$(CC) $(CFLAG) $(SRC) -o $@
