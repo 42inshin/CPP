@@ -6,12 +6,12 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:19 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/05 06:49:14 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/12 01:57:39 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef __PHONEBOOK_H__
+# define __PHONEBOOK_H__
 
 # include <iostream>
 # include <string>
