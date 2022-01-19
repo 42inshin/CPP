@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:11 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/04 12:14:07 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/19 10:40:06 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ int	main(void)
 		book.PhonebookHeader();
 		std::cin >> cmd;
 		if (std::cin.eof())
-		{
-			std::cout << std::endl;
-			return 0;
-		}
+			break;
 		if (cmd == "EXIT")
 			return 0;
 		else if (cmd == "ADD")

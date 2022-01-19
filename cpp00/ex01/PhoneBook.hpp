@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:19 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/19 10:08:38 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/19 15:56:41 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ private:
 
 public:
 
-	std::string	GetFirstName() const;
-	std::string	GetLastName() const;
-	std::string	GetNickname() const;
-	std::string	GetPhoneNumber() const;
-	std::string	GetSecret() const;
+	std::string	GetFirstName( void ) const;
+	std::string	GetLastName( void ) const;
+	std::string	GetNickname( void ) const;
+	std::string	GetPhoneNumber( void ) const;
+	std::string	GetSecret( void ) const;
 
-	void	SetContact();
-	void	ShowContact() const;
+	void	SetContact( void );
+	void	ShowContact( void ) const;
 
 };
 
