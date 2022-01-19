@@ -3,3 +3,4 @@ doc/
 temp/
 
 .DS_Store
+*.o

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 02:15:21 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/12 02:45:10 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/19 10:03:11 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void Account::displayAccountsInfos(void)
 
 Account::Account(int initial_deposit)
 {
+	
 }
 
 Account::~Account(void)
