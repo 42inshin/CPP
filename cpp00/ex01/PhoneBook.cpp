@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/19 15:59:09 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/19 22:20:13 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void PhoneBook::SearchHeader( void ) const
 void PhoneBook::Search( void )
 {
 	SearchHeader();
-	for (size_t i = 0; i < BOOK_LEN; i++)
+	for (int i = 0; i < BOOK_LEN; i++)
 	{
 		std::cout << std::setw(10) << i << "|";
 		std::cout << std::setw(10) << GetBlock(contact[i].GetFirstName()) << "|";
@@ -118,7 +118,7 @@ void PhoneBook::Search( void )
 		std::cout << std::setw(10) << GetBlock(contact[i].GetNickname()) << std::endl;
 	}
 	std::cout << COLOR_G << "Please enter an index to view details." << COLOR_END << std::endl;
-	std::cout << "SEARCH> ";
+	std::cout << COLOR_G  << "SEARCH> " << COLOR_END;
 
 	int index;
 	std::cin >> index;

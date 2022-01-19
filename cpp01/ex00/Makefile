@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/19 21:50:55 by inshin            #+#    #+#              #
-#    Updated: 2022/01/19 22:22:35 by inshin           ###   ########seoul.kr   #
+#    Created: 2022/01/19 23:20:04 by inshin            #+#    #+#              #
+#    Updated: 2022/01/20 00:55:17 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	PhoneBook
+NAME	=	Zombie
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
-SRC		=	PhoneBook.cpp main.cpp
+SRC		=	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
 .cpp.o:
@@ -33,3 +33,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
