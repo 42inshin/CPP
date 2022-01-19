@@ -6,11 +6,21 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/05 06:48:57 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/18 17:42:57 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook() : _index(0)
+{
+
+}
+
+PhoneBook::~PhoneBook()
+{
+	std::cout << COLOR_Y << "Goodbye!" << COLOR_END << std::endl;
+}
 
 std::string Contact::GetFirstName() const
 {
