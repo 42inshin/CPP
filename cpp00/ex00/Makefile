@@ -6,12 +6,11 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 02:17:40 by inshin            #+#    #+#              #
-#    Updated: 2022/01/19 10:22:19 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/19 21:52:17 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	Megaphone
-
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
 SRC		=	Megaphone.cpp
@@ -31,6 +30,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: clean all
+re: fclean all
 
 .PHONY: all clean fclean re

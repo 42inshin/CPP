@@ -1,21 +1,36 @@
-NAME	=	Account
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/19 21:51:02 by inshin            #+#    #+#              #
+#    Updated: 2022/01/19 21:51:57 by inshin           ###   ########seoul.kr   #
+#                                                                              #
+# **************************************************************************** #
 
+NAME	=	Account
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
 SRC		=	Account.cpp tests.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
-$(NAME):
-	$(CXX) $(CXXFLAG) $(SRC) -o $@
+.cpp.o:
+	$(CXX) $(CXXFLAG) -c $< -o $@
+
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAG) $^ -o $@
 
 all: $(NAME)
 
 clean:
 	rm -rf $(OBJ)
 
-fclean:
+fclean: clean
 	rm -rf $(NAME)
 
-re: clean all
+re: fclean all
 
-.PHONY: $(NAME) all clean re
+.PHONY: all clean fclean re
+
