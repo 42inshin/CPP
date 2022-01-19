@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:19 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/19 15:56:41 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/19 21:47:49 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 # define COLOR_Y	"\033[0;33m"
 # define COLOR_END	"\033[0;0m"
 
-class Contact{
-
+class Contact {
 
 private:
 
@@ -48,7 +47,6 @@ public:
 };
 
 class PhoneBook {
-
 
 enum
 {
