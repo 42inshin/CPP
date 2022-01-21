@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/19 23:24:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/22 02:43:02 by inshin           ###   ########seoul.kr  */
+/*   Created: 2022/01/19 23:22:23 by inshin            #+#    #+#             */
+/*   Updated: 2022/01/22 02:33:18 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie( std::string name )
+int	main(void)
 {
-	_name = name;
-}
+	int num = 20;
+	Zombie *horde = zombieHorde(num, "horde");
 
-Zombie::~Zombie( void )
-{
-	std::cout << '<' << _name << "> is dead" << std::endl;
-}
-
-Zombie::Zombie( void )
-{
-	std::cout << "Please, Input a Zombie name." << std::endl;
-}
-
-void	Zombie::announce( void )
-{
-	std::cout << '<' << _name << "> BraiiiiiiinnnzzzZ..." << std::endl;
+	for (int i = 0; i < num; i++)
+		horde[i].announce();
+	delete[] horde;
+	return 0;
 }

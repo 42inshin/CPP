@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 23:24:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/22 02:43:02 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/22 02:43:50 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,16 @@ Zombie::~Zombie( void )
 
 Zombie::Zombie( void )
 {
-	std::cout << "Please, Input a Zombie name." << std::endl;
+	std::cout << "Zombie Horde!" << std::endl;
 }
 
 void	Zombie::announce( void )
 {
 	std::cout << '<' << _name << "> BraiiiiiiinnnzzzZ..." << std::endl;
 }
+
+void	Zombie::setName( std::string name )
+{
+	this->_name = name;
+}
+
