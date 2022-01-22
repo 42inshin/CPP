@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 02:57:43 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/22 05:17:44 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/22 17:05:55 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,27 @@ int main(int ac, char **av)
 	}
 	std::ifstream openFile(fileName);
 	std::string extension = ".replace";
-	if (openFile.is_open())
+	if (!openFile.is_open())
 	{
-		std::ofstream writeFile(fileName + extension);
-		std::string line;
-		std::string::size_type found;
-		while (getline(openFile, line))
-		{
-			while (true)
-			{
-				found = line.find(str1);
-				if (found == std::string::npos)
-					break;
-				line.erase(found, str1.size());
-				line.insert(found, str2);
-			}
-			writeFile << line << std::endl;
-		}
-		writeFile.close();
+		std::cout << "[ " << fileName << " ] file does not exist!" << std::endl;
+		return 0;
 	}
+	std::ofstream writeFile(fileName + extension);
+	std::string line;
+	std::string::size_type found;
+	while (getline(openFile, line))
+	{
+		while (true)
+		{
+			found = line.find(str1);
+			if (found == std::string::npos)
+				break;
+			line.erase(found, str1.size());
+			line.insert(found, str2);
+		}
+		writeFile << line << std::endl;
+	}
+	writeFile.close();
 	openFile.close();
 	return 0;
 }
