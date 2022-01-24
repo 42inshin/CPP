@@ -6,11 +6,11 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/22 16:54:54 by inshin            #+#    #+#              #
-#    Updated: 2022/01/22 18:08:43 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/22 18:46:58 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	fixed
+NAME	=	a.out
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
 SRC		=	main.cpp Fixed.cpp

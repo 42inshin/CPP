@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 17:45:14 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/22 18:26:31 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/24 19:12:42 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 
 #include <iostream>
 
-class Fixed {
+class Fixed
+{
 
-	private:
-		int _raw;
-		static const int _bit;
+private:
+	int _fixed;
+	static const int _bit = 8;
 
-	public:
-		Fixed( void );
-		Fixed( const Fixed& origin );
-		Fixed& operator=(const Fixed& origin );
-		~Fixed( void );
+public:
+	Fixed(void);
+	Fixed(const Fixed& origin);
+	Fixed& operator=(const Fixed& origin);
+	~Fixed(void);
 
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
 };
 
 #endif
