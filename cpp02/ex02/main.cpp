@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 19:09:42 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/25 04:36:56 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/25 04:55:26 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ int main(void)
 {
 	Fixed a;
 	Fixed const b(Fixed(5.05f) * Fixed(2));
-	std::cout << "[++]" << std::endl;
+	std::cout << "[++ unary operators]" << std::endl;
 	std::cout << a << std::endl;
 	std::cout << ++a << std::endl;
 	std::cout << a << std::endl;
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 
-	std::cout << "[--]" << std::endl;
+	std::cout << "[-- unary operators]" << std::endl;
 	std::cout << a << std::endl;
 	std::cout << --a << std::endl;
 	std::cout << a << std::endl;
