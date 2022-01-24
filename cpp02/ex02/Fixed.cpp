@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 19:09:27 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/24 19:09:28 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/24 19:47:24 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,3 +72,34 @@ std::ostream& operator<<(std::ostream& os, const Fixed& val)
 	os << val.toFloat();
 	return os;
 }
+
+Fixed& Fixed::operator++(void)
+{
+	_fixed++;
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp = *this;
+	++*this;
+	return temp;
+}
+
+Fixed& Fixed::operator*(const Fixed& f)
+{
+	Fixed temp;
+	temp._fixed = this->_fixed * f._fixed;
+	return temp;
+}
+
+Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+	Fixed temp;
+	if (a._fixed > b._fixed)
+		temp = a;
+	else
+		temp = b;
+	return temp;
+}
+
