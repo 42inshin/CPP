@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:11 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/19 10:40:06 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/25 16:20:34 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	main(void)
 			book.Add();
 		else if (cmd == "SEARCH")
 			book.Search();
-		else
-			std::cout << '"' << cmd << '"' << " is wrong cmd" << std::endl;
+		// else
+			// std::cout << '"' << cmd << '"' << " is wrong cmd" << std::endl;
 	}
 	return 0;
 }

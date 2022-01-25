@@ -6,16 +6,13 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:27:23 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/19 22:20:13 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/25 16:33:49 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook( void ) : _index(0)
-{
-
-}
+PhoneBook::PhoneBook( void ) : _index(0) {}
 
 PhoneBook::~PhoneBook( void )
 {
@@ -73,9 +70,9 @@ void	Contact::ShowContact( void ) const
 
 void PhoneBook::PhonebookHeader( void ) const
 {
-	std::cout << COLOR_Y <<  std::setfill ('*') << std::setw (34) << COLOR_END << std::endl;
+	std::cout << COLOR_Y << std::setfill('*') << std::setw(34) << COLOR_END << std::endl;
 	std::cout << COLOR_Y << "[CMD TYPE] ADD, SEARCH, EXIT" << COLOR_END << std::endl;
-	std::cout << COLOR_Y <<  std::setfill ('*') << std::setw (34) << COLOR_END << std::endl;
+	std::cout << COLOR_Y << std::setfill('*') << std::setw(34) << COLOR_END << std::endl;
 	std::cout << std::setfill(' ');
 	std::cout << "> ";
 }
@@ -126,7 +123,7 @@ void PhoneBook::Search( void )
 	{
 		std::cout << COLOR_R << "Wrong Index!" << COLOR_END << std::endl;
 		std::cin.clear();
-		std::cin.ignore(2, '\n');
+		std::cin.ignore(200, '\n');
 	}
 	else
 		contact[index].ShowContact();
