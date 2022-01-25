@@ -1,48 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/25 05:19:32 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/25 05:35:52 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 
-void FragTrap::rangedAttack(std::string const & target)
+void ClapTrap::attack(std::string const & target)
+{
+	std::cout << "ClapTrap <" << _name
+		<< "> attack <" << target
+		<< ">, causing <" << _attack_damage
+		<< "> points of damage!"<< std::endl;
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
 {
 
 }
 
-void FragTrap::meleeAttack(std::string const & target)
+void ClapTrap::beRepaired(unsigned int amount)
 {
 
 }
 
-void FragTrap::takeDamage(unsigned int amount)
+ClapTrap::ClapTrap(std::string name) : _name(name)
 {
-
+	_hit_points = 10;
+	_energy_points = 10;
+	_attack_damage = 0;
 }
 
-void FragTrap::beRepaired(unsigned int amount)
-{
-
-}
-
-FragTrap::FragTrap(std::string name)
-{
-
-}
-
-FragTrap::FragTrap(void)
+ClapTrap::ClapTrap(void)
 {
 	std::cout << "Please Write a Name!" << std::endl;
 }
 
-FragTrap::~FragTrap(void)
+ClapTrap::~ClapTrap(void)
 {
 	std::cout << _name << " is destroyed!" << std::endl;
 }

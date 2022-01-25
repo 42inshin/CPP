@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/25 05:21:26 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/25 05:33:28 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FRAG_TRAP_H__
-#define __FRAG_TRAP_H__
+#ifndef __CLAP_TRAP_H__
+#define __CLAP_TRAP_H__
 
 #include <iostream>
 #include <string>
 
-class FragTrap
+class ClapTrap
 {
 
 private:
-	int	_hit_point;
-	int	_max_hit_point;
-	int	_energy_point;
-	int	_max_energy_point;
 	std::string _name;
-	int	_level;
-	int _melee_attack_damage;
-	int _ranged_attack_damage;
-	int _armor_damage_reduction;
+	int	_hit_points;
+	int	_energy_points;
+	int _attack_damage;
 
 public:
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
+	void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
-	FragTrap(std::string name);
-	FragTrap(void);
-	~FragTrap(void);
+	ClapTrap(std::string name);
+	ClapTrap(void);
+	~ClapTrap(void);
 
 };
 
