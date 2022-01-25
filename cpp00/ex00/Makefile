@@ -6,14 +6,14 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 02:17:40 by inshin            #+#    #+#              #
-#    Updated: 2022/01/25 16:54:16 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/25 17:00:12 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	megaphone
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
-SRC		=	Megaphone.cpp
+SRC		=	megaphone.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
 .cpp.o:
