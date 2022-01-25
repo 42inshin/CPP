@@ -6,11 +6,11 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 02:17:40 by inshin            #+#    #+#              #
-#    Updated: 2022/01/19 21:52:17 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/25 16:54:16 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Megaphone
+NAME	=	megaphone
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
 SRC		=	Megaphone.cpp

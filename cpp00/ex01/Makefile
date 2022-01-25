@@ -6,11 +6,11 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/19 21:50:55 by inshin            #+#    #+#              #
-#    Updated: 2022/01/19 22:22:35 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/25 16:54:31 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	PhoneBook
+NAME	=	phoneBook
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
 SRC		=	PhoneBook.cpp main.cpp

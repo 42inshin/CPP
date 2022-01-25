@@ -6,11 +6,11 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/19 21:51:02 by inshin            #+#    #+#              #
-#    Updated: 2022/01/19 21:51:57 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/25 16:54:45 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Account
+NAME	=	account
 CXX		=	c++
 CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
 SRC		=	Account.cpp tests.cpp
