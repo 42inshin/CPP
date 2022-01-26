@@ -6,21 +6,21 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 04:56:24 by inshin            #+#    #+#              #
-#    Updated: 2022/01/25 04:56:55 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/01/26 12:00:46 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	fragTrap
-CXX		=	c++
-CXXFLAG	=	-Wall -Wextra -Werror -std=c++98
-SRC		=	main.cpp FragTrap.cpp
-OBJ		=	$(SRC:.cpp=.o)
+NAME		=	clapTrap
+CXX			=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror
+SRC			=	main.cpp ClapTrap.cpp
+OBJ			=	$(SRC:.cpp=.o)
 
 .cpp.o:
-	$(CXX) $(CXXFLAG) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAG) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 all: $(NAME)
 
