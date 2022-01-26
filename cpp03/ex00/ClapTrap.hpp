@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/26 12:18:01 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/26 17:04:22 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 class ClapTrap
 {
-
 private:
 	std::string _name;
 	unsigned int _hit_points;
@@ -26,8 +25,6 @@ private:
 	unsigned int _attack_damage;
 
 public:
-	std::string getName(void) const;
-
 	void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/26 12:30:17 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/26 17:04:19 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 			<< ">" << std::endl;
 	}
 }
-
-std::string ClapTrap::getName(void) const
-{
-	return this->_name;
-}
-
 
 ClapTrap::ClapTrap(std::string name)
 	: _name(name), _hit_points(10), _energy_points(10), _attack_damage(0)
