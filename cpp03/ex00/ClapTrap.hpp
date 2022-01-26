@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/26 17:04:22 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/27 04:50:30 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,19 @@ private:
 	unsigned int _hit_points;
 	unsigned int _energy_points;
 	unsigned int _attack_damage;
+	unsigned int _max_hp;
 
 public:
 	void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+
+	void info(void);
+	std::string getName(void) const;
+	unsigned int getHP(void) const;
+	unsigned int getEP(void) const;
+	unsigned int getAD(void) const;
+	unsigned int getMaxHP(void) const;
 
 	ClapTrap(std::string name);
 	ClapTrap(void);
