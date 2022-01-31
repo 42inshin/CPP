@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 06:44:48 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/27 06:44:05 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-void FragTrap::highFivesGuys(void)
+void ScavTrap::guardGate(void)
 {
-	std::cout << "FragTrap <" << _name << "> High fives request!" << std::endl;
+	std::cout << "ScavTrap <" << _name << "> Gate keeper mode ON!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	_hit_points = 100;
-	_energy_points = 100;
-	_attack_damage = 30;
-	_max_hp = _hit_points;
-	std::cout << "FragTrap <" << _name << "> is created!" << std::endl;
-}
-
-FragTrap::FragTrap(void)
-{
-	_name = "NULL";
-	_hit_points = 100;
-	_energy_points = 100;
-	_attack_damage = 30;
+	_energy_points = 50;
+	_attack_damage = 20;
 	_max_hp = _hit_points;
 	std::cout << "ScavTrap <" << _name << "> is created!" << std::endl;
 }
 
-FragTrap::~FragTrap(void)
+ScavTrap::ScavTrap(void)
 {
-	std::cout << "FragTrap <" << _name << "> is destroyed!" << std::endl;
+	_name = "NULL";
+	_hit_points = 100;
+	_energy_points = 50;
+	_attack_damage = 20;
+	_max_hp = _hit_points;
+	std::cout << "ScavTrap <" << _name << "> is created!" << std::endl;
+}
+
+ScavTrap::~ScavTrap(void)
+{
+	std::cout << "ScavTrap <" << _name << "> is destroyed!" << std::endl;
 }
 

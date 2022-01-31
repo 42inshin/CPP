@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 04:43:31 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/27 06:41:31 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,8 +133,11 @@ ClapTrap::ClapTrap(std::string name)
 }
 
 ClapTrap::ClapTrap(void)
+	: _hit_points(10), _energy_points(10), _attack_damage(0)
 {
-	std::cout << "Please Write a Name!" << std::endl;
+	_name = "NULL";
+	_max_hp = _hit_points;
+	std::cout << "ClapTrap <" << _name << "> is created!" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
