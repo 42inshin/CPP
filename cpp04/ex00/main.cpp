@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 10:56:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/31 17:16:36 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/01/31 23:09:43 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ int main()
 	delete i;
 	delete j;
 	delete meta;
+	return 0;
 }
