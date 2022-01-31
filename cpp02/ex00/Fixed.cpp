@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 17:45:17 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/25 03:56:31 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/01 00:33:41 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ Fixed::Fixed(const Fixed &origin)
 Fixed& Fixed::operator=(const Fixed& origin)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	_fixed = origin._fixed;
-	this->getRawBits();
+	this->_fixed = origin.getRawBits();
 	return *this;
 }
 
