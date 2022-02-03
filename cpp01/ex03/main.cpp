@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 02:57:43 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/22 04:03:51 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/03 13:24:52 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("some other type of club");
+		club.setType("HumanA club");
 		bob.attack();
 	}
 	{
@@ -30,7 +30,7 @@ int main()
 		HumanB jim("Jim");
 		jim.setWeapon(club);
 		jim.attack();
-		club.setType("some other type of club");
+		club.setType("HumanB club");
 		jim.attack();
 	}
 }
