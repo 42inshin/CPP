@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 02:57:43 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/22 17:05:55 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/03 13:45:06 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main(int ac, char **av)
 	std::string extension = ".replace";
 	if (!openFile.is_open())
 	{
-		std::cout << "[ " << fileName << " ] file does not exist!" << std::endl;
+		std::cout << "[ " << fileName << " ] file does not open!" << std::endl;
 		return 0;
 	}
 	std::ofstream writeFile(fileName + extension);
@@ -48,6 +48,11 @@ int main(int ac, char **av)
 				break;
 			line.erase(found, str1.size());
 			line.insert(found, str2);
+		}
+		if (!writeFile.is_open())
+		{
+			std::cout << "[ " << fileName << " ]  writeFile does not open!" << std::endl;
+			break;
 		}
 		writeFile << line << std::endl;
 	}
