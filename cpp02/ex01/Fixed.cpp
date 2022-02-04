@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 17:45:17 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/24 19:01:00 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/04 16:32:22 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ Fixed::~Fixed(void)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return _fixed;
 }
+
 void Fixed::setRawBits(int const raw)
 {
 	_fixed = raw;
