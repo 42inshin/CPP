@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/01 03:28:21 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/03 16:21:39 by inshin           ###   ########seoul.kr  */
+/*   Created: 2022/02/03 16:01:42 by inshin            #+#    #+#             */
+/*   Updated: 2022/02/03 16:17:52 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CURE_H__
-#define __CURE_H__
+#include "Ice.hpp"
 
-#include "AMateria.hpp"
-
-class Cure : public AMateria
+AMateria* Ice::clone() const
 {
-public:
-	AMateria* clone() const;
-	void use(ICharacter& target);
-	Cure();
-	~Cure();
-};
+	AMateria *mete = new Ice;
+	return mete;
+}
 
-#endif
+void Ice::use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}
+
+Ice::Ice() : AMateria("ice")
+{
+	std::cout << "Ice create!" << std::endl;
+}
+
+Ice::~Ice()
+{
+	std::cout << "~Ice" << std::endl;
+}

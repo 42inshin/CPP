@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 03:05:50 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/01 03:40:04 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/04 15:51:20 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,8 @@ void AMateria::use(ICharacter& target)
 {
 	std::cout << "AMateria use: \"* " << target.getName() << " *\"" << std::endl;
 }
+
+AMateria();
+AMateria(const AMateria& copy);
+AMateria& operator=(const AMateria&);
+~AMateria();

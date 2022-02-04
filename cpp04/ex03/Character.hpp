@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/01 03:28:21 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/03 16:21:39 by inshin           ###   ########seoul.kr  */
+/*   Created: 2022/02/03 16:28:18 by inshin            #+#    #+#             */
+/*   Updated: 2022/02/03 16:45:43 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CURE_H__
-#define __CURE_H__
+#include "ICharacter.hpp"
 
-#include "AMateria.hpp"
-
-class Cure : public AMateria
+class Character : public ICharacter
 {
+private:
+	AMateria	*inven[INVEN_SIZE];
+	std::string	name;
+
 public:
-	AMateria* clone() const;
-	void use(ICharacter& target);
-	Cure();
-	~Cure();
+	std::string const & getName() const;
+	void equip(AMateria* m);
+	void unequip(int idx);
+	void use(int idx, Character& target);
+	Character();
+	Character(const Character& copy);
+	Character& operator=(const Character& copy);
+	~Character();
 };
 
-#endif
