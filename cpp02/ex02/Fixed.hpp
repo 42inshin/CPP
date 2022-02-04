@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 19:09:32 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/25 04:19:39 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/04 15:55:11 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ public:
 	Fixed(void);
 	Fixed(const int val);
 	Fixed(const float val);
-	Fixed(const Fixed& origin);
-	Fixed& operator=(const Fixed& origin);
-	bool operator>(const Fixed& origin);
-	bool operator<(const Fixed& origin);
-	bool operator>=(const Fixed& origin);
-	bool operator<=(const Fixed& origin);
-	bool operator==(const Fixed& origin);
-	bool operator!=(const Fixed& origin);
+	Fixed(const Fixed& f);
+	Fixed& operator=(const Fixed& f);
+	bool operator>(const Fixed& f);
+	bool operator<(const Fixed& f);
+	bool operator>=(const Fixed& f);
+	bool operator<=(const Fixed& f);
+	bool operator==(const Fixed& f);
+	bool operator!=(const Fixed& f);
 	Fixed& operator++(void);
 	Fixed operator++(int);
 	Fixed& operator--(void);
