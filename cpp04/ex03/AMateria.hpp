@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 02:57:46 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/03 17:55:06 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/06 06:32:55 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include "ICharacter.hpp"
 
 #define INVEN_SIZE 4
+
+class ICharacter;
 
 class AMateria
 {
@@ -33,9 +35,8 @@ public:
 
 	AMateria();
 	AMateria(const AMateria& copy);
-	AMateria& operator=(const AMateria&);
-	~AMateria();
-
+	AMateria& operator=(const AMateria& copy);
+	virtual ~AMateria();
 };
 
 #endif

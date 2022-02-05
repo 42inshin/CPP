@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 03:00:26 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/01 03:04:23 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/06 06:32:19 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define __ICHARACTER_H__
 
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

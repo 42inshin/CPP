@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.hpp                                      :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 16:28:18 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/06 06:25:45 by inshin           ###   ########seoul.kr  */
+/*   Created: 2022/02/06 05:12:31 by inshin            #+#    #+#             */
+/*   Updated: 2022/02/06 05:39:52 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CHARACTER_H__
-#define __CHARACTER_H__
+#ifndef __MATERIASOURCE_H__
+#define __MATERIASOURCE_H__
 
-#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
 
-class Character : public ICharacter
+class MateriaSource : public IMateriaSource
 {
 private:
-	AMateria*	inven[INVEN_SIZE];
-	std::string	name;
+	AMateria* mbook[INVEN_SIZE];
 
 public:
 	AMateria* getMateria(int idx) const;
-	std::string const & getName() const;
-	void equip(AMateria* m);
-	void unequip(int idx);
-	void use(int idx, ICharacter& target);
+	void learnMateria(AMateria* meteria);
+	AMateria* createMateria(std::string const & type);
 
-	Character();
-	Character(const std::string & name);
-	Character(const Character& copy);
-	Character& operator=(const Character& copy);
-	~Character();
+	MateriaSource();
+	MateriaSource(const MateriaSource& copy);
+	MateriaSource& operator=(const MateriaSource& copy);
+	~MateriaSource();
 };
 
 #endif
