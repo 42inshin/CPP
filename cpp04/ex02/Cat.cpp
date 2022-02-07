@@ -6,15 +6,15 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:36:59 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/01 01:06:00 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 17:01:47 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Brain Cat::getBrain() const
+Brain* Cat::getBrain() const
 {
-	return *myBrain;
+	return myBrain;
 }
 
 void Cat::makeSound() const
@@ -29,16 +29,11 @@ Cat::Cat(void) : Animal(), myBrain(NULL)
 	myBrain = new Brain();
 }
 
-Cat::~Cat(void)
-{
-	std::cout << "Cat Destructors!" << std::endl;
-	delete myBrain;
-}
-
 Cat& Cat::operator=(const Cat& copy)
 {
 	std::cout << "Cat Assignation operator!" << std::endl;
-	*myBrain = copy.getBrain();
+	type = copy.getType();
+	myBrain = new Brain(*(copy.getBrain()));
 	return *this;
 }
 
@@ -46,4 +41,10 @@ Cat::Cat(const Cat& copy)
 {
 	std::cout << "Cat Copy Constructor!" << std::endl;
 	*this = copy;
+}
+
+Cat::~Cat(void)
+{
+	std::cout << "Cat Destructors!" << std::endl;
+	delete myBrain;
 }

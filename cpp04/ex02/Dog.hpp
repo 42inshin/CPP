@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:32:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/01 01:05:19 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 17:02:31 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ private:
 	Brain *myBrain;
 
 public:
-	Brain getBrain() const;
+	Brain *getBrain() const;
 	void makeSound() const;
 	Dog();
-	~Dog();
 	Dog& operator=(const Dog& copy);
 	Dog(const Dog& copy);
+	~Dog();
 };
 
 #endif
