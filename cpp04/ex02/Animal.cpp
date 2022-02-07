@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:20:43 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/01 02:21:26 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 23:13:40 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,19 @@ void Animal::SetType(std::string type)
 Animal::Animal() : type("Undefined")
 {
 	std::cout << "Animal Constructors!" << std::endl;
+}
+
+Animal::Animal(const Animal& copy)
+{
+	std::cout << "Animal Copy Constructors!" << std::endl;
+	*this = copy;
+}
+
+Animal& Animal::operator=(const Animal& copy)
+{
+	std::cout << "Animal Assignation!" << std::endl;
+	type = copy.getType();
+	return *this;
 }
 
 Animal::~Animal()

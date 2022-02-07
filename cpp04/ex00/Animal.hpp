@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 10:57:58 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/31 16:38:22 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 23:10:00 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ public:
 	std::string getType() const;
 	void SetType(std::string type);
 	Animal();
+	Animal(const Animal& copy);
+	Animal& operator=(const Animal& copy);
 	virtual ~Animal();
 };
 

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:35:59 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/31 16:29:17 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 23:17:27 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Cat : public Animal
 public:
 	void makeSound() const;
 	Cat();
+	Cat(const Cat& copy);
+	Cat& operator=(const Cat& copy);
 	~Cat();
 };
 
