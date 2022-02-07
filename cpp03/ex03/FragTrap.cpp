@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 06:45:07 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:52:30 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,23 @@ FragTrap::FragTrap(void)
 	_energy_points = 100;
 	_attack_damage = 30;
 	_max_hp = _hit_points;
-	std::cout << "ScavTrap <" << _name << "> is created!" << std::endl;
+	std::cout << "FragTrap <" << _name << "> is created!" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap& copy)
+{
+	std::cout << "FragTrap Copy Constructor" << std::endl;
+	*this = copy;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& copy)
+{
+	_name = copy.getName();
+	_hit_points = copy.getHP();
+	_energy_points = copy.getEP();
+	_attack_damage = copy.getAD();
+	_max_hp = copy.getMaxHP();
+	return *this;
 }
 
 FragTrap::~FragTrap(void)

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 06:43:31 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:46:44 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,22 @@ ScavTrap::ScavTrap(void)
 	_attack_damage = 20;
 	_max_hp = _hit_points;
 	std::cout << "ScavTrap <" << _name << "> is created!" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& copy)
+{
+	std::cout << "ScavTrap Copy Constructor" << std::endl;
+	*this = copy;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
+{
+	_name = copy.getName();
+	_hit_points = copy.getHP();
+	_energy_points = copy.getEP();
+	_attack_damage = copy.getAD();
+	_max_hp = copy.getMaxHP();
+	return *this;
 }
 
 ScavTrap::~ScavTrap(void)

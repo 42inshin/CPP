@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/28 03:53:51 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:47:37 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ public:
 	void guardGate(void);
 	ScavTrap(std::string name);
 	ScavTrap(void);
+	ScavTrap(const ScavTrap& copy);
+	ScavTrap& operator=(const ScavTrap& copy);
 	~ScavTrap(void);
 };
 

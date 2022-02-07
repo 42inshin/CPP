@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 04:50:30 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:32:38 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ public:
 
 	ClapTrap(std::string name);
 	ClapTrap(void);
+	ClapTrap(const ClapTrap& copy);
+	ClapTrap& operator=(const ClapTrap& copy);
 	~ClapTrap(void);
 
 };

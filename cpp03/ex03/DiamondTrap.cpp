@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/28 03:57:00 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 12:01:45 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,22 @@ DiamondTrap::DiamondTrap(void)
 	_attack_damage = FragTrap::_attack_damage;
 	_max_hp = _hit_points;
 	std::cout << "DiamondTrap <" << _name << "> is created!" << std::endl;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap& copy)
+{
+	std::cout << "DiamondTrap Copy Construtor" << std::endl;
+	*this = copy;
+}
+
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& copy)
+{
+	_name = copy.getName();
+	_hit_points = copy.getHP();
+	_energy_points = copy.getEP();
+	_attack_damage = copy.getAD();
+	_max_hp = copy.getMaxHP();
+	return *this;
 }
 
 DiamondTrap::~DiamondTrap(void)

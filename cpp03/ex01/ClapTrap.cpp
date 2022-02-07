@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 06:41:31 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:39:17 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,23 @@ ClapTrap::ClapTrap(void)
 	_name = "NULL";
 	_max_hp = _hit_points;
 	std::cout << "ClapTrap <" << _name << "> is created!" << std::endl;
+}
+
+
+ClapTrap::ClapTrap(const ClapTrap& copy)
+{
+	std::cout << "ClapTrap Copy Constructor" << std::endl;
+	*this = copy;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& copy)
+{
+	_name = copy.getName();
+	_hit_points = copy.getHP();
+	_energy_points = copy.getEP();
+	_attack_damage = copy.getAD();
+	_max_hp = copy.getMaxHP();
+	return *this;
 }
 
 ClapTrap::~ClapTrap(void)

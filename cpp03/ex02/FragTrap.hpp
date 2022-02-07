@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 05:19:06 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:52:53 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ public:
 	void highFivesGuys(void);
 	FragTrap(std::string name);
 	FragTrap(void);
+	FragTrap(const FragTrap& copy);
+	FragTrap& operator=(const FragTrap& copy);
 	~FragTrap(void);
 };
 

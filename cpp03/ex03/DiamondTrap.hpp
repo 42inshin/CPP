@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:50:04 by inshin            #+#    #+#             */
-/*   Updated: 2022/01/27 06:28:10 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 11:54:51 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ public:
 	void whoAmI(void);
 	DiamondTrap(std::string name);
 	DiamondTrap(void);
+	DiamondTrap(const DiamondTrap& copy);
+	DiamondTrap& operator=(const DiamondTrap& copy);
 	~DiamondTrap(void);
 };
 
