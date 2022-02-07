@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 05:20:01 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/06 06:45:08 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 01:00:26 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 MateriaSource::MateriaSource()
 {
 	std::cout << "MateriaSource Default Constructor" << std::endl;
+	for (int i = 0; i < INVEN_SIZE; i++)
+	{
+		mbook[i] = NULL;
+	}
 }
 
 MateriaSource::MateriaSource(const MateriaSource& copy)
