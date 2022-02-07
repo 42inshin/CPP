@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:16:13 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 03:44:09 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 04:27:04 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Bureaucrat::Bureaucrat(const std::string name, const int grade)
 	else if (grade > 150)
 		throw GradeTooLowException();
 	this->grade = grade;
-	std::cout << "Bureaucrat Constructor: " << this->name << ", grade: " << this->grade << std::endl;
+	std::cout << "Bureaucrat Named Constructor" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& copy)
