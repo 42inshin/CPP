@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 03:02:18 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/01 03:03:57 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 00:30:14 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class IMateriaSource
 {
 public:
 	virtual ~IMateriaSource() {}
-	virtual void learnMateria(AMateria*) = 0;
+	virtual void learnMateria(AMateria* meteria) = 0;
 	virtual AMateria* createMateria(std::string const & type) = 0;
 };
 
