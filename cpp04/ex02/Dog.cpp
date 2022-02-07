@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:32:41 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/07 17:02:52 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 22:55:14 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ Dog::Dog(const Dog& copy)
 
 Dog::~Dog()
 {
-	std::cout << "Dog Destructors!" << std::endl;
 	delete myBrain;
+	std::cout << "Dog Destructors!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:36:59 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/07 17:01:47 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 22:55:21 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ Cat::Cat(const Cat& copy)
 
 Cat::~Cat(void)
 {
-	std::cout << "Cat Destructors!" << std::endl;
 	delete myBrain;
+	std::cout << "Cat Destructors!" << std::endl;
 }
