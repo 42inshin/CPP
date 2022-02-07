@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 04:49:57 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/07 12:01:45 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 12:19:17 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void DiamondTrap::whoAmI(void)
 }
 
 DiamondTrap::DiamondTrap(std::string name)
-	: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
+	:ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
 	_name = name;
 	_hit_points = FragTrap::_hit_points;
