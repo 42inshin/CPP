@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:32:41 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/07 17:03:24 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 22:44:31 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ Dog& Dog::operator=(const Dog& copy)
 
 Dog::Dog(const Dog& copy)
 {
-	std::cout << "Cat Copy Constructor!" << std::endl;
 	*this = copy;
+	std::cout << "Cat Copy Constructor!" << std::endl;
 }
 
 Dog::~Dog()
 {
-	std::cout << "Dog Destructors!" << std::endl;
 	delete myBrain;
+	std::cout << "Dog Destructors!" << std::endl;
 }

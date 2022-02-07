@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 11:36:59 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/07 17:15:58 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/07 22:44:45 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ Cat& Cat::operator=(const Cat& copy)
 
 Cat::Cat(const Cat& copy)
 {
-	std::cout << "Cat Copy Constructor!" << std::endl;
 	*this = copy;
+	std::cout << "Cat Copy Constructor!" << std::endl;
 }
 
 Cat::~Cat(void)
 {
-	std::cout << "Cat Destructors!" << std::endl;
 	delete myBrain;
+	std::cout << "Cat Destructors!" << std::endl;
 }
