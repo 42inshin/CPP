@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:55:31 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 05:07:58 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 05:34:23 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,23 +80,23 @@ Form& Form::operator=(const Form &copy)
 
 Form::~Form()
 {
-	std::cout << "Form Destructor" << std::endl;
+	std::cout << "~Form" << std::endl;
 }
 
 const char* Form::GradeTooHighException::what() const throw()
 {
-	return "* Form Too High, Highest Grade is 1 *";
+	return "* Form Too High *";
 }
 
 const char* Form::GradeTooLowException::what() const throw()
 {
-	return "* Form Too Low, Lowest Grade is 150 *";
+	return "* Form Too Low *";
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
 	return os << "<" << f.getName() << ">, signed <"
-			<< f.getSign() << ">, sign grade <"
+			<< (f.getSign() ? "True" : "False") << ">, sign grade <"
 			<< f.getSignGrade() << ">, execute grade <"
-			<< f.getExecuteGrade() << ">" << std::endl;
+			<< f.getExecuteGrade() << ">";
 }

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:16:13 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 04:43:39 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 05:28:53 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void Bureaucrat::signForm(Form& form)
 	}
 	catch(const Form::GradeTooLowException& e)
 	{
-		std::cerr << e.what() << '\n';
-		std::cerr << "<" << this->getName() << "> cannot sign <" << form.getName() << "> \n"
-			<<" because Signed Grade is <" << form.getSign() << ">"
-			<< "but your grade is <" << ">" << this->getGrade() << std::endl;
+		std::cerr << e.what() << std::endl;
+		std::cerr << "<" << this->getName() << "> cannot sign <" << form.getName()
+			<<">, because Sign Grade is <" << form.getSignGrade() << ">"
+			<< " but your Grade is <" << this->getGrade() << ">" << std::endl;
 	}
 }
 

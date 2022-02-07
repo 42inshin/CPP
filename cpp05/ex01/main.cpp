@@ -6,56 +6,33 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:11:17 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 03:50:27 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 05:33:53 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void)
 {
-	// range(1 ~ 150) 미만 또는 초과
-	try
-	{
-		Bureaucrat humanA("A", 0);
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	std::cout << std::endl;
-	try
-	{
-		Bureaucrat humanC("C", 151);
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	Bureaucrat humanA("A", 1);
+	Bureaucrat humanB("B", 100);
 
-	std::cout << std::endl;
-	try
-	{
-		Bureaucrat humanB("B", 1);
-		std::cout << humanB << std::endl;
-		humanB.incrementGrade(1); // catch로 넘어가면서 아래 코드 실행 안됨
-		std::cout << humanB << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	std::cout << humanA << std::endl;
+	std::cout << humanB << std::endl;
 
-	std::cout << std::endl;
-	try
-	{
-		Bureaucrat humanD("D", 150);
-		std::cout << humanD << std::endl;
-		humanD.decrementGrade(1);
-		std::cout << humanD << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	Form file1("file1", 1, 1);
+	Form file2("file2", 42, 50);
+
+	std::cout << file1 << std::endl;
+	std::cout << file2 << std::endl;
+
+
+	humanA.signForm(file1);
+	humanB.signForm(file2);
+
+	std::cout << file1 << std::endl;
+	std::cout << file2 << std::endl;
+
+	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:55:33 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 04:55:02 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/08 05:21:29 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define __FORM_H__
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -49,6 +51,5 @@ public:
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& f);
-
 
 #endif

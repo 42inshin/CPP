@@ -6,7 +6,7 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/08 01:43:26 by inshin            #+#    #+#              #
-#    Updated: 2022/02/08 01:44:17 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/02/08 05:19:56 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror
 
 NAME		=	a.out
-SRC			=	main.cpp Bureaucrat.cpp
+SRC			=	main.cpp Bureaucrat.cpp Form.cpp
 OBJ			=	$(SRC:.cpp=.o)
 
 .cpp.o:
