@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:55:31 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 05:34:23 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 01:35:54 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,12 @@ Form::~Form()
 
 const char* Form::GradeTooHighException::what() const throw()
 {
-	return "* Form Too High *";
+	return "* Grade Too High *";
 }
 
 const char* Form::GradeTooLowException::what() const throw()
 {
-	return "* Form Too Low *";
+	return "* Grade Too Low *";
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& f)

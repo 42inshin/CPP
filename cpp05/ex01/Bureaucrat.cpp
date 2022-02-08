@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:16:13 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 05:28:53 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 02:25:30 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ void Bureaucrat::signForm(Form& form)
 		form.beSigned(*this);
 		std::cout << "<" << this->getName() << "> signs <" << form.getName() << ">" << std::endl;
 	}
-	catch(const Form::GradeTooLowException& e)
+	catch(const std::exception &e)
 	{
-		std::cerr << e.what() << std::endl;
 		std::cerr << "<" << this->getName() << "> cannot sign <" << form.getName()
-			<<">, because Sign Grade is <" << form.getSignGrade() << ">"
-			<< " but your Grade is <" << this->getGrade() << ">" << std::endl;
+			<<">, because <" << e.what() << ">" << std::endl;
 	}
 }
 
@@ -89,12 +87,12 @@ Bureaucrat::~Bureaucrat()
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return "* Too High, highest Grade is 1 *";
+	return "* Grade Too High, highest Grade is 1 *";
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "* Too Low, Lowest Grade is 150 *";
+	return "* Grade Too Low, Lowest Grade is 150 *";
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)

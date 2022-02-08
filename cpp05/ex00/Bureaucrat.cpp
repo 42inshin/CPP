@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:16:13 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 04:27:04 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 00:27:47 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,12 @@ Bureaucrat::~Bureaucrat()
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return "* Too High, highest Grade is 1 *";
+	return "* Grade Too High, highest Grade is 1 *";
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "* Too Low, Lowest Grade is 150 *";
+	return "* Grade Too Low, Lowest Grade is 150 *";
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
