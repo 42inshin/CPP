@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:16:13 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/09 01:55:11 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 04:11:03 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void Bureaucrat::executeForm(Form const & form)
 	try
 	{
 		form.execute(*this);
-		std::cout << "<" << this->getName() << "> executes <" << form.getName() << ">" << std::endl;
+		std::cout << "<" << this->getName() << "> executes <" << form.getName() << ":"
+				<< form.getTarget() << ">" << std::endl;
 	}
 	catch(const std::exception &e)
 	{
@@ -31,7 +32,8 @@ void Bureaucrat::signForm(Form& form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << "<" << this->getName() << "> signs <" << form.getName() << ">" << std::endl;
+		std::cout << "<" << this->getName() << "> signs <" << form.getName() << ":"
+				<< form.getTarget() << ">" << std::endl;
 	}
 	catch(const std::exception &e)
 	{

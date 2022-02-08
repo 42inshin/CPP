@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:55:33 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/09 02:06:30 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 03:42:02 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ public:
 	Form();
 	Form(const Form &copy);
 	Form& operator=(const Form &copy);
-	~Form();
+	virtual ~Form();
 
 	class GradeTooHighException : public std::exception
 	{

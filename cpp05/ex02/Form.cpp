@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:55:31 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/09 02:13:49 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 04:12:57 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ const char* Form::FileNotOpenException::what() const throw()
 
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
-	return os << "<" << f.getName() << ">, signed <"
+	return os << "<" << f.getName() << ":" << f.getTarget() << ">, signed <"
 			<< (f.getSign() ? "True" : "False") << ">, sign grade <"
 			<< f.getSignGrade() << ">, execute grade <"
 			<< f.getExecuteGrade() << ">";
