@@ -6,14 +6,14 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/09 14:44:38 by inshin            #+#    #+#              #
-#    Updated: 2022/02/10 02:48:10 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/02/10 03:00:20 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror
 
-NAME		=	data
+NAME		=	Serialization
 SRC			=	main.cpp Data.cpp
 OBJ			=	$(SRC:.cpp=.o)
 
