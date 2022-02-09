@@ -6,15 +6,15 @@
 #    By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/09 14:44:38 by inshin            #+#    #+#              #
-#    Updated: 2022/02/09 14:44:46 by inshin           ###   ########seoul.kr   #
+#    Updated: 2022/02/09 18:38:50 by inshin           ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror
 
-NAME		=	a.out
-SRC			=	main.cpp
+NAME		=	convert
+SRC			=	main.cpp Convert.cpp
 OBJ			=	$(SRC:.cpp=.o)
 
 .cpp.o:
