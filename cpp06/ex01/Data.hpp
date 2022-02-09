@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 02:24:37 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/10 02:57:02 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/10 05:34:40 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 #include <iostream>
 #include <string>
 #include <cstdint> // uintptr_t
-// uintptr_t: unsigned int pointer type
-// 포인터 주소를 저장하는데 사용한다. 다른 환경으로 이식이 가능하다. 이식할때는 캐스팅을 하자.
+// uintptr_t: unsigned integer pointer type
+// 포인터 주소를 변환하고 다시 원래 포인터와 동일한 값으로 변환할 수 있는 정수형 타입이다.
+// 해당 타입으로 변환 시 캐스팅이 필요하다.
 
 struct Data
 {
