@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:52:24 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 04:27:57 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 16:01:50 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <exception>
 #include "Form.hpp"
 
 class Form;

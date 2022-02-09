@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:52:24 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/08 04:05:26 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/09 16:01:53 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define __BUREAUCRAT_H__
 
 #include <iostream>
+#include <exception>
 #include <string>
 
 class Bureaucrat
