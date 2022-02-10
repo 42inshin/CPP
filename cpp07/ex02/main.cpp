@@ -34,7 +34,7 @@ int main(void)
 	Array<float> arr_float(8);
 	// initialize
 	for (int i = 0; i < arr_float.size(); i++)
-		arr_float[i] = 4.2f;
+		arr_float[i] = i + 0.42f;
 	// copy, Assignment
 	Array<float> tmp_float1 = arr_float;
 	Array<float> tmp_float2(tmp_float1);
