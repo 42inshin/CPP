@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 17:37:31 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/10 18:06:15 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/11 02:20:55 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,59 @@ template <typename T>
 class Array
 {
 private:
-	unsigned int size;
+	T*	arr;
+	int	len;
 
 public:
-	Array();
-	Array(unsigned int n) // 기본값 초기화 해줘야 함
+	Array()
 	{
-
+		len = 0;
+		arr = NULL;
 	}
-	Array(const Array& ref) // 깊은 복사
-	{
 
-	}
-	Array& operator=(const Array& ref) // 깊은 복사
+	Array(unsigned int n)
 	{
+		len = static_cast<int>(n);
+		arr = new T[len];
+	}
 
-	}
-	T& operator[](unsigned int i)
+	Array(const Array& ref)
 	{
+		len = ref.len;
+		if (len)
+			arr = new T[len];
+		for (int i = 0; i < len; i++)
+		{
+			arr[i] = ref.arr[i];
+		}
+	}
 
-	}
-	unsigned int size() const
+	Array& operator=(const Array& ref)
 	{
-		return size;
+		len = ref.len;
+		if (len)
+			arr = new T[len];
+		for (int i = 0; i < len; i++)
+			arr[i] = ref.arr[i];
+		return *this;
+	}
+
+	~Array()
+	{
+		if (arr)
+			delete[] arr;
+	}
+
+	T& operator[](int idx)
+	{
+		if(idx < 0 || idx >= len)
+			throw OutOfLimitsException();
+		return arr[idx];
+	}
+
+	int size() const
+	{
+		return len;
 	}
 
 	class OutOfLimitsException : public std::exception
@@ -47,9 +77,9 @@ public:
 	public:
 		const char* what() const throw()
 		{
-			return "This element is out of the limits."
+			return "This element is out of the limits.";
 		}
-	}
+	};
 };
 
 #endif
