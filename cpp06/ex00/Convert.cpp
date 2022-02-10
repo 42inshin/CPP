@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 18:13:51 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/10 14:06:19 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/10 20:29:47 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ double Convert::toDouble() const
 	if (is_invalid)
 		throw ImpossibleException();
 	if (is_nan)
-		throw NormalException("nan");
+		throw NormalException("nanf");
 	if (is_inf)
 	{
 		if (str == "-inf")
