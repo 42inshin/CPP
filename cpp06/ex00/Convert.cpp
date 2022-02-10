@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 18:13:51 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/10 01:43:14 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/10 14:06:19 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char Convert::toChar() const
 {
 	if (is_nan || is_inf || is_invalid || value < 0 || value > 255)
 		throw ImpossibleException();
-	if (value < 32 || value > 126)
+	if (!std::isprint(static_cast<int>(value))) // iscntrl(int c)로도 가능
 		throw NonDisplayableException();
 	return static_cast<char>(value);
 }
