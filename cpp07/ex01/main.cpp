@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 16:30:59 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/10 17:29:54 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/10 17:34:55 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,18 @@ int main()
 	std::cout << std::endl;
 
 	// ===== char =====
-	char charArr[5] = {'h','e','l','l','o'};
+	char charArr[5] = {'h', 'e', 'l', 'l', 'o'};
 	iter(charArr, 5, printIn);
 	std::cout << std::endl;
 
 	// ===== string =====
-	std::string stringArr[3] = {"hello","world","inshin"};
+	std::string stringArr[3] = {"hello", "world", "inshin"};
 	iter(stringArr, 3, printIn);
 	std::cout << std::endl;
 
 	return 0;
 }
+
 /*
 class Awesome
 {
@@ -58,9 +59,9 @@ int main() {
 
 	Awesome tab2[5];
 
-	iter(tab, 5, print );
-	iter(tab2, 5, print );
+	iter( tab, 5, print );
+	iter( tab2, 5, print );
 
 	return 0;
 }
- */
+*/
