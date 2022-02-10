@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 18:03:19 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/10 01:42:40 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/10 13:53:09 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 #include <exception>
 #include <string>
-#include <cstdlib> // strtod or atof
+#include <cstdlib> // strtod or atof : Convert string to double
 #include <cctype> // isdigit
 #include <climits> // INT_MAX, INT_MIN
 
