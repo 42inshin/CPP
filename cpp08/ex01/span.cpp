@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:23:01 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 05:04:42 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 05:29:45 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int Span::shortestSpan()
 	std::vector<int> temp = c;
 	std::sort(temp.begin(), temp.end());
 	int min_span = temp[1] - temp[0];
-	for (int i = 0; i < len - 1; i++)
+	for (int i = 0; i < cnt - 1; i++)
 			min_span = std::min(temp[i + 1] - temp[i], min_span);
 	return min_span;
 }
