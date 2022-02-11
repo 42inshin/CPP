@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:01:05 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 01:07:52 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 04:35:29 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 {
 	try
 	{
-		Span sp = Span(5);
+		Span sp = Span(5); // 10000 test
 		sp.addNumber(5);
 		sp.addNumber(3);
 		sp.addNumber(17);
