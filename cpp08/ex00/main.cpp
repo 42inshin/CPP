@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 18:18:36 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/11 20:59:43 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 04:28:57 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int main(void)
 
 	// vector
 	std::cout << "======== vector ========" << std::endl;
-	std::vector<int>::iterator v_it = begin(vc);
-	while (v_it != end(vc))
+	std::vector<int>::iterator v_it = vc.begin();
+	while (v_it != vc.end())
 		std::cout << *v_it++ << " ";
 	std::cout << std::endl;
 	// easyfind
@@ -53,8 +53,8 @@ int main(void)
 
 	// list
 	std::cout << "======== list ========" << std::endl;
-	std::list<int>::iterator l_it = begin(ls);
-	while (l_it != end(ls))
+	std::list<int>::iterator l_it = ls.begin();
+	while (l_it != ls.end())
 		std::cout << *l_it++ << " ";
 	std::cout << std::endl;
 	// easyfind

@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 17:51:48 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/11 22:20:43 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 04:25:41 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <algorithm>
 
 template<typename T>
-typename T::iterator easyfind(T& c, int n)
+typename T::iterator easyfind(T &c, int n)
 {
 		typename T::iterator it;
 
