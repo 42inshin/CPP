@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:01:05 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 04:35:29 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 05:07:13 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main()
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
-		// sp.addRandomNumbers(93);
+		// sp.addRandomNumbers(95);
 		print(sp);
 
 		std::cout << "min span: " << sp.shortestSpan() << std::endl;

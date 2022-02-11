@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:02:47 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 00:57:08 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 05:04:34 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <climits> // INT_MAX
 #include <cstdlib> // rand, srand
 #include <ctime> // time
 #include <iomanip> // setw

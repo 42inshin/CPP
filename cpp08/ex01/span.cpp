@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:23:01 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 00:48:10 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 05:04:42 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,11 @@ int Span::shortestSpan()
 {
 	if (cnt < 2)
 		throw LackOfNumberException();
-	int min_span = INT_MAX;
-	int temp;
-	for (int i = 0; i < cnt - 1; i++)
-	{
-		for (int j = i + 1; j < cnt; j++)
-		{
-			if (c[i] > c[j])
-				temp = c[i] - c[j];
-			else
-				temp = c[j] - c[i];
-			if (min_span > temp)
-				min_span = temp;
-		}
-	}
+	std::vector<int> temp = c;
+	std::sort(temp.begin(), temp.end());
+	int min_span = temp[1] - temp[0];
+	for (int i = 0; i < len - 1; i++)
+			min_span = std::min(temp[i + 1] - temp[i], min_span);
 	return min_span;
 }
 
