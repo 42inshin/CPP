@@ -6,41 +6,75 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 18:18:36 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/11 18:47:13 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/11 20:59:43 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "easyfind.hpp"
 #include <vector>
-#include <algorithm>
-
-template<typename T>
-typename T::iterator easyfind(T& container, int n)
-{
-		typename T::iterator it = std::find(container.begin(), container.end(), n);
-		if (it == container.end())
-			throw std::runtime_error("it can’t be found");
-		return it;
-}
-
+#include <list>
 
 int main(void)
 {
-	std::vector<int> v;
-
+	std::vector<int> vc;
+	std::list<int> ls;
+	// initialize
 	for (int i = 0; i < 10; i++)
-		v.push_back(i + 1);
-
-	std::vector<int>::iterator it = begin(v);
-	while (it != end(v))
 	{
-		std::cout << *it++ << std::endl;
+		vc.push_back(i * 21);
+		ls.push_back(i);
 	}
-	try {
-		it = easyfind(v, 8);
-		std::cout << "easyfind: " << *it << std::endl;
-	} catch (const std::exception &e) {
-		std::cerr << "error: " << e.what() << std::endl;
+
+	// vector
+	std::cout << "======== vector ========" << std::endl;
+	std::vector<int>::iterator v_it = begin(vc);
+	while (v_it != end(vc))
+		std::cout << *v_it++ << " ";
+	std::cout << std::endl;
+	// easyfind
+	try
+	{
+		std::vector<int>::iterator vit = easyfind(vc, 42);
+		std::cout << "easyfind: " << *vit << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "[error] " << e.what() << std::endl;
+	}
+	try
+	{
+		std::vector<int>::iterator vit = easyfind(vc, 1000);
+		std::cout << "easyfind: " << *vit << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "[error] " << e.what() << std::endl;
+	}
+
+	// list
+	std::cout << "======== list ========" << std::endl;
+	std::list<int>::iterator l_it = begin(ls);
+	while (l_it != end(ls))
+		std::cout << *l_it++ << " ";
+	std::cout << std::endl;
+	// easyfind
+	try
+	{
+		std::list<int>::iterator vit = easyfind(ls, 7);
+		std::cout << "easyfind: " << *vit << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "[error] " << e.what() << std::endl;
+	}
+	try
+	{
+		std::list<int>::iterator vit = easyfind(ls, -10);
+		std::cout << "easyfind: " << *vit << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "[error] " << e.what() << std::endl;
 	}
 	return 0;
 }
