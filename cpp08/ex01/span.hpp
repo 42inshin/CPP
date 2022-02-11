@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:02:47 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 05:38:14 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 05:42:56 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ public:
 	void addRandomNumbers(int n);
 	int shortestSpan();
 	int longestSpan();
+	std::vector<int>& getC();
 
 	Span(unsigned int n);
 	Span(const Span& ref);

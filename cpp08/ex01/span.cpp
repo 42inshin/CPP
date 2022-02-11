@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 21:23:01 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 05:38:07 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 05:42:52 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ int Span::longestSpan()
 	std::vector<int>::iterator min_it = std::min_element(c.begin(), c.end());
 	std::vector<int>::iterator max_it = std::max_element(c.begin(), c.end());
 	return *max_it - *min_it;
+}
+
+std::vector<int>& Span::getC()
+{
+	return c;
 }
 
 Span::Span() {}
