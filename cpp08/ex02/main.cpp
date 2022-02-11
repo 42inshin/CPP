@@ -6,7 +6,7 @@
 /*   By: inshin <inshin@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 01:09:35 by inshin            #+#    #+#             */
-/*   Updated: 2022/02/12 03:25:13 by inshin           ###   ########seoul.kr  */
+/*   Updated: 2022/02/12 04:14:20 by inshin           ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void print(MutantStack<T> mstack)
 int main()
 {
 	{
-		std::cout << "======= <1> ======" << std::endl;
+		std::cout << "======= <1> =======" << std::endl;
+		// ------ pdf main.cpp start line ------
 		MutantStack<int> mstack;
 		mstack.push(5);
 		mstack.push(17);
@@ -40,18 +41,34 @@ int main()
 		MutantStack<int>::iterator it = mstack.begin();
 		MutantStack<int>::iterator ite = mstack.end();
 		++it;
-		std::cout << *it << std::endl;
+		std::cout << "++it: " << *it << std::endl;
 		--it;
-		std::cout << *it << std::endl;
+		std::cout << "--it: " << *it << std::endl;
 		while (it != ite)
 		{
 			std::cout << *it << std::endl;
 			++it;
 		}
 		std::stack<int> s(mstack);
+		// ------ pdf main.cpp end line ------
+
+		std::cout << "== copy test ==" << std::endl;
+		std::cout << "<stack s>: ";
+		while (!s.empty()) // 꺼내면서 출력해서 역순으로 나옵니다.
+		{
+			std::cout << s.top() << ' ';
+			s.pop();
+		}
+		std::cout << std::endl;
+		MutantStack<int> copy(mstack);
+		std::cout << "<copy1>: ";
+		print(copy);
+		std::cout << "<copy2>: ";
+		MutantStack<int> copy2 = copy;
+		print(copy2);
 	}
 	{
-		std::cout << "======= <2> ======" << std::endl;
+		std::cout << "======= <2> =======" << std::endl;
 		MutantStack<char> mstack;
 		mstack.push(65);	// A
 		mstack.push(66);	// B
@@ -61,22 +78,17 @@ int main()
 		mstack.push(69);	// E
 		std::cout << "stack print:" << std::endl;
 		print(mstack);
+		std::cout << "size: " << mstack.size() << std::endl;
 	}
 	{
-		std::cout << "======= <3> ======" << std::endl;
+		std::cout << "======= <3> =======" << std::endl;
 		MutantStack<int> mstack;
 		for (int i = 1; i <= 10; i++)
 			mstack.push(i);
-		//======================
 		std::cout << "stack print:" << std::endl;
 		print(mstack);
-		std::cout << "reverse print:" << std::endl;
-		MutantStack<int>::reverse_iterator rit = mstack.rbegin();
-		MutantStack<int>::reverse_iterator rite = mstack.rend();
-		while (rit != rite)
-			std::cout << *rit++ << ' ';
-		std::cout << std::endl;
-		//======================
+		std::cout << "size: " << mstack.size() << std::endl;
+
 		int sum = 0;
 		while (!mstack.empty())
 		{
